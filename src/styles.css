@@ -74,9 +74,9 @@
   --input: oklch(0.90 0.03 290);
   --ring: oklch(0.55 0.20 295);
 
-  --font-display: "Caveat Brush", "Caveat", cursive;
-  --font-hand: "Patrick Hand", "Caveat", cursive;
-  --font-body: "Nunito", system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-hand: "Patrick Hand", cursive;
+  --font-body: "Plus Jakarta Sans", "Nunito", system-ui, sans-serif;
 }
 
 @layer base {
