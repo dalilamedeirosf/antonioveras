@@ -78,18 +78,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Pediatra Dr. Antônio Veras" },
-      { name: "description", content: "Desenvolvimento e Neurodesenvolvimento Infantil.Cuidando da saúde, do desenvolviment
-Cuidando da saúde, do desenvolvimento e do futuro do seu filho" },
+      { name: "description", content: "Desenvolvimento e Neurodesenvolvimento Infantil. Cuidando da saúde, do desenvolvimento e do futuro do seu filho." },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "Pediatra Dr. Antônio Veras" },
-      { property: "og:description", content: "Desenvolvimento e Neurodesenvolvimento Infantil.Cuidando da saúde, do desenvolviment
-Cuidando da saúde, do desenvolvimento e do futuro do seu filho" },
+      { property: "og:description", content: "Desenvolvimento e Neurodesenvolvimento Infantil. Cuidando da saúde, do desenvolvimento e do futuro do seu filho." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Pediatra Dr. Antônio Veras" },
-      { name: "twitter:description", content: "Desenvolvimento e Neurodesenvolvimento Infantil.Cuidando da saúde, do desenvolviment
-Cuidando da saúde, do desenvolvimento e do futuro do seu filho" },
+      { name: "twitter:description", content: "Desenvolvimento e Neurodesenvolvimento Infantil. Cuidando da saúde, do desenvolvimento e do futuro do seu filho." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2c48dcfc-069e-4c78-b112-7277f8885d51/id-preview-c092e59a--825ee0a1-7b39-47ea-990e-1527c647a323.lovable.app-1780740396538.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2c48dcfc-069e-4c78-b112-7277f8885d51/id-preview-c092e59a--825ee0a1-7b39-47ea-990e-1527c647a323.lovable.app-1780740396538.png" },
     ],
