@@ -59,85 +59,77 @@ const doubts = [
 function Index() {
   return (
     <main className="paper-bg min-h-screen overflow-hidden">
-      {/* HERO with floating nav */}
-      <section id="top" className="relative px-3 pt-3 sm:px-5 sm:pt-5">
-        <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem]">
-          {/* Background photo */}
-          <img
-            src={drAntonio.url}
-            alt="Dr. Antônio Veras sorrindo em seu consultório"
-            className="absolute inset-0 h-full w-full object-cover object-center"
-          />
-          {/* Gradient overlay for legibility */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(8,12,30,0.78) 0%, rgba(8,12,30,0.55) 38%, rgba(8,12,30,0.15) 65%, rgba(8,12,30,0) 100%)",
-            }}
-          />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[color:var(--background)] to-transparent" />
-
-          {/* Doodles */}
-          <img src={doodleStar} alt="" aria-hidden className="pointer-events-none absolute right-6 top-28 hidden w-14 rotate-12 opacity-90 md:block" />
-          <img src={doodleCloud} alt="" aria-hidden className="pointer-events-none absolute left-6 bottom-10 hidden w-20 opacity-80 md:block" />
-
-          {/* Floating nav */}
-          <div className="relative z-20 mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full bg-[rgba(15,18,32,0.78)] px-5 py-3 backdrop-blur-md ring-1 ring-white/10 mt-4 sm:mt-6">
-            <a href="#top" className="flex items-center gap-2 leading-none">
-              <span className="font-display text-2xl text-white sm:text-3xl">
-                Dr. Antônio <span className="text-[color:var(--teal)]">Veras</span>
-              </span>
+      {/* HERO */}
+      <section id="top" className="relative">
+        {/* Floating nav */}
+        <div className="relative z-30 px-4 pt-6 sm:px-8">
+          <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 rounded-full bg-[#0f1220] px-5 py-3 shadow-[0_10px_30px_-15px_rgba(15,18,32,0.5)] sm:px-7 sm:py-4">
+            <a href="#top" className="font-display text-2xl leading-none text-white sm:text-3xl">
+              Dr. Antônio <span className="text-[color:var(--teal)]">Veras</span>
             </a>
-            <nav className="hidden items-center gap-8 font-hand text-lg text-white/85 md:flex">
+            <nav className="hidden items-center gap-8 font-body text-sm font-semibold text-white/85 md:flex">
               <a href="#top" className="hover:text-white">Início</a>
               <a href="#areas" className="hover:text-white">Áreas</a>
               <a href="#fotos" className="hover:text-white">Pacientes</a>
               <a href="#agendar" className="hover:text-white">Contato</a>
             </nav>
-            <a
-              href="#agendar"
-              className="rounded-full bg-[color:var(--teal)] px-5 py-2 font-hand text-base text-[#0b1020] shadow-[3px_3px_0_0_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 sm:text-lg"
-            >
-              Agendar
-            </a>
           </div>
+        </div>
 
-          {/* Hero content */}
-          <div className="relative z-10 mx-auto grid max-w-6xl gap-8 px-2 pb-24 pt-20 sm:pb-32 sm:pt-28 md:grid-cols-2 md:pb-40 md:pt-32">
-            <div className="text-white">
-              <p className="font-hand text-lg text-[color:var(--teal)] sm:text-xl">
-                Dr. Antônio Veras · Pediatra
-              </p>
-              <h1 className="mt-3 font-display text-5xl leading-[1] sm:text-6xl md:text-7xl">
-                Pediatria do{" "}
-                <span className="crayon-underline text-white">Desenvolvimento</span>,
-                Neurodesenvolvimento e Saúde Infantil no Rio de Janeiro
-              </h1>
-              <p className="mt-6 max-w-xl font-body text-base text-white/85 sm:text-lg">
-                Atendimento especializado em Pediatria, Desenvolvimento Infantil, TEA, TDAH,
-                Transtornos do Neurodesenvolvimento, Neurologia Pediátrica e Saúde Mental
-                da Criança e do Adolescente.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="#agendar"
-                  className="rounded-full bg-[color:var(--teal)] px-7 py-3 font-hand text-xl text-[#0b1020] shadow-[5px_5px_0_0_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5"
-                >
-                  Agendar consulta →
-                </a>
-                <a
-                  href="#areas"
-                  className="rounded-full border-2 border-dashed border-white/70 px-7 py-3 font-hand text-xl text-white transition hover:bg-white/10"
-                >
-                  Áreas de atendimento
-                </a>
+        {/* Decorative doodles */}
+        <img src={doodleStar} alt="" aria-hidden className="pointer-events-none absolute left-8 top-40 hidden w-12 rotate-12 opacity-70 md:block" />
+        <img src={doodleCloud} alt="" aria-hidden className="pointer-events-none absolute right-10 top-32 hidden w-20 opacity-70 lg:block" />
+        <img src={doodleSun} alt="" aria-hidden className="pointer-events-none absolute left-1/3 bottom-10 hidden w-14 opacity-70 md:block" />
+
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 pb-20 pt-12 md:grid-cols-[1.1fr_1fr] md:gap-6 md:pb-28 md:pt-16">
+          {/* Left: text */}
+          <div className="relative">
+            <p className="font-hand text-lg text-[color:var(--purple)] sm:text-xl">
+              Dr. Antônio Veras · CRM-RJ
+            </p>
+            <h1 className="mt-3 font-display text-5xl leading-[1.02] text-foreground sm:text-6xl md:text-[5.5rem]">
+              Pediatria do{" "}
+              <span className="crayon-underline">Desenvolvimento</span>,
+              Neurodesenvolvimento e Saúde Infantil no Rio de Janeiro
+            </h1>
+            <p className="mt-6 max-w-xl font-body text-base text-muted-foreground sm:text-lg">
+              Atendimento especializado em Pediatria, Desenvolvimento Infantil, TEA, TDAH,
+              Transtornos do Neurodesenvolvimento, Neurologia Pediátrica e Saúde Mental
+              da Criança e do Adolescente.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-5">
+              <a
+                href="#agendar"
+                className="inline-flex items-center gap-2 rounded-full bg-[color:var(--teal)] px-7 py-3.5 font-hand text-xl text-[#0b1020] shadow-[4px_4px_0_0_color-mix(in_oklab,var(--purple)_25%,white)] transition hover:-translate-y-0.5"
+              >
+                Agendar consulta
+                <span aria-hidden>→</span>
+              </a>
+              <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 ring-1 ring-border">
+                <span className="font-display text-base">Google</span>
+                <span className="text-[color:var(--sun)]">★★★★★</span>
+                <span className="font-body text-sm text-muted-foreground">Nota 5.0</span>
               </div>
             </div>
-            <div aria-hidden className="hidden md:block" />
+          </div>
+
+          {/* Right: photo */}
+          <div className="relative">
+            <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-[color:var(--teal-soft)] rotate-[-2deg]" />
+            <div className="absolute -inset-2 -z-10 rounded-[2.5rem] bg-[color:var(--purple-soft)] rotate-[1.5deg]" />
+            <div className="relative overflow-hidden rounded-[2.25rem] border-4 border-white shadow-xl">
+              <img
+                src={drAntonio.url}
+                alt="Dr. Antônio Veras em seu consultório"
+                className="block h-full w-full object-cover"
+              />
+            </div>
+            <img src={doodleStar} alt="" aria-hidden className="pointer-events-none absolute -right-5 -top-5 w-16 rotate-12" />
           </div>
         </div>
       </section>
+
+
 
 
       {/* DOUBTS */}
