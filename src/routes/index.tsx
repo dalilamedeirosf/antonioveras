@@ -59,85 +59,61 @@ const doubts = [
 function Index() {
   return (
     <main className="paper-bg min-h-screen overflow-hidden">
-      {/* HERO with floating nav */}
-      <section id="top" className="relative px-3 pt-3 sm:px-5 sm:pt-5">
-        <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem]">
+      {/* HERO */}
+      <section id="top" className="relative bg-[#0b1020]">
+        <div className="relative overflow-hidden rounded-br-[5rem] sm:rounded-br-[8rem] md:rounded-br-[10rem]">
           {/* Background photo */}
           <img
             src={drAntonio.url}
-            alt="Dr. Antônio Veras sorrindo em seu consultório"
+            alt="Dr. Antônio Veras"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
-          {/* Gradient overlay for legibility */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(8,12,30,0.78) 0%, rgba(8,12,30,0.55) 38%, rgba(8,12,30,0.15) 65%, rgba(8,12,30,0) 100%)",
-            }}
-          />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[color:var(--background)] to-transparent" />
-
-          {/* Doodles */}
-          <img src={doodleStar} alt="" aria-hidden className="pointer-events-none absolute right-6 top-28 hidden w-14 rotate-12 opacity-90 md:block" />
-          <img src={doodleCloud} alt="" aria-hidden className="pointer-events-none absolute left-6 bottom-10 hidden w-20 opacity-80 md:block" />
+          {/* Minimal dark overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/65" />
 
           {/* Floating nav */}
-          <div className="relative z-20 mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full bg-[rgba(15,18,32,0.78)] px-5 py-3 backdrop-blur-md ring-1 ring-white/10 mt-4 sm:mt-6">
-            <a href="#top" className="flex items-center gap-2 leading-none">
-              <span className="font-display text-2xl text-white sm:text-3xl">
-                Dr. Antônio <span className="text-[color:var(--teal)]">Veras</span>
-              </span>
+          <div className="relative z-20 mx-4 mt-5 flex items-center justify-between gap-4 rounded-2xl bg-[rgba(15,18,32,0.85)] px-6 py-4 backdrop-blur-md ring-1 ring-white/10 sm:mx-8 md:mx-auto md:max-w-5xl">
+            <a href="#top" className="font-display text-2xl text-white sm:text-3xl leading-none">
+              Dr. Antônio <span className="text-[color:var(--teal)]">Veras</span>
             </a>
             <nav className="hidden items-center gap-8 font-hand text-lg text-white/85 md:flex">
-              <a href="#top" className="hover:text-white">Início</a>
-              <a href="#areas" className="hover:text-white">Áreas</a>
-              <a href="#fotos" className="hover:text-white">Pacientes</a>
+              <a href="#top" className="hover:text-white">Home</a>
+              <a href="#areas" className="hover:text-white">Serviços</a>
+              <a href="#fotos" className="hover:text-white">Sobre mim</a>
               <a href="#agendar" className="hover:text-white">Contato</a>
             </nav>
-            <a
-              href="#agendar"
-              className="rounded-full bg-[color:var(--teal)] px-5 py-2 font-hand text-base text-[#0b1020] shadow-[3px_3px_0_0_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 sm:text-lg"
-            >
-              Agendar
-            </a>
           </div>
 
           {/* Hero content */}
-          <div className="relative z-10 mx-auto grid max-w-6xl gap-8 px-2 pb-24 pt-20 sm:pb-32 sm:pt-28 md:grid-cols-2 md:pb-40 md:pt-32">
+          <div className="relative z-10 mx-auto grid max-w-6xl gap-10 px-6 pb-24 pt-24 sm:px-8 sm:pb-32 sm:pt-28 md:grid-cols-2 md:items-end md:pb-32 md:pt-40">
             <div className="text-white">
-              <p className="font-hand text-lg text-[color:var(--teal)] sm:text-xl">
+              <p className="font-hand text-base text-[color:var(--teal)] sm:text-lg">
                 Dr. Antônio Veras · Pediatra
               </p>
-              <h1 className="mt-3 font-display text-5xl leading-[1] sm:text-6xl md:text-7xl">
-                Pediatria do{" "}
-                <span className="crayon-underline text-white">Desenvolvimento</span>,
-                Neurodesenvolvimento e Saúde Infantil no Rio de Janeiro
+              <h1 className="mt-4 font-display text-4xl leading-[1.05] sm:text-5xl md:text-6xl">
+                Pediatria do Desenvolvimento e Neurodesenvolvimento Infantil no Rio de Janeiro
               </h1>
-              <p className="mt-6 max-w-xl font-body text-base text-white/85 sm:text-lg">
-                Atendimento especializado em Pediatria, Desenvolvimento Infantil, TEA, TDAH,
-                Transtornos do Neurodesenvolvimento, Neurologia Pediátrica e Saúde Mental
-                da Criança e do Adolescente.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="#agendar"
-                  className="rounded-full bg-[color:var(--teal)] px-7 py-3 font-hand text-xl text-[#0b1020] shadow-[5px_5px_0_0_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5"
-                >
-                  Agendar consulta →
-                </a>
-                <a
-                  href="#areas"
-                  className="rounded-full border-2 border-dashed border-white/70 px-7 py-3 font-hand text-xl text-white transition hover:bg-white/10"
-                >
-                  Áreas de atendimento
-                </a>
+              <div className="mt-8 inline-flex items-center gap-3 rounded-full bg-black/40 px-4 py-2 ring-1 ring-white/15 backdrop-blur">
+                <span className="font-display text-base text-white">Google</span>
+                <span className="tracking-wider text-sm text-[color:var(--sun)]">★★★★★</span>
+                <span className="font-hand text-sm text-white/90">Nota 5.0 no Google</span>
               </div>
             </div>
-            <div aria-hidden className="hidden md:block" />
+            <div className="text-white md:pb-2 md:pl-6">
+              <p className="max-w-md font-body text-lg leading-relaxed text-white/90 sm:text-xl">
+                Atendimento especializado em Pediatria, TEA, TDAH, Neurologia Pediátrica e Saúde Mental da criança e do adolescente.
+              </p>
+              <a
+                href="#agendar"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-[color:var(--teal)] px-8 py-4 font-hand text-xl text-[#0b1020] shadow-[5px_5px_0_0_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5"
+              >
+                Entrar em contato →
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
 
 
       {/* DOUBTS */}
