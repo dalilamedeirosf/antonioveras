@@ -59,70 +59,86 @@ const doubts = [
 function Index() {
   return (
     <main className="paper-bg min-h-screen overflow-hidden">
-      {/* NAV */}
-      <header className="relative z-10">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-          <a href="#top" className="font-display text-3xl text-primary leading-none">
-            Dr. Pediatra <span className="text-secondary">+</span>
-          </a>
-          <a
-            href="#agendar"
-            className="hidden rounded-full bg-primary px-5 py-2 font-hand text-lg text-primary-foreground shadow-[4px_4px_0_0_var(--teal)] transition hover:-translate-y-0.5 sm:inline-block"
-          >
-            Agendar consulta
-          </a>
-        </div>
-      </header>
+      {/* HERO with floating nav */}
+      <section id="top" className="relative px-3 pt-3 sm:px-5 sm:pt-5">
+        <div className="relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem]">
+          {/* Background photo */}
+          <img
+            src={drAntonio.url}
+            alt="Dr. Antônio Veras sorrindo em seu consultório"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
+          {/* Gradient overlay for legibility */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(8,12,30,0.78) 0%, rgba(8,12,30,0.55) 38%, rgba(8,12,30,0.15) 65%, rgba(8,12,30,0) 100%)",
+            }}
+          />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[color:var(--background)] to-transparent" />
 
-      {/* HERO */}
-      <section id="top" className="relative">
-        <img src={doodleCloud} alt="" aria-hidden className="absolute left-4 top-2 w-24 opacity-80 md:w-32" />
-        <img src={doodleStar} alt="" aria-hidden className="absolute right-10 top-24 w-16 rotate-12 md:w-20" />
+          {/* Doodles */}
+          <img src={doodleStar} alt="" aria-hidden className="pointer-events-none absolute right-6 top-28 hidden w-14 rotate-12 opacity-90 md:block" />
+          <img src={doodleCloud} alt="" aria-hidden className="pointer-events-none absolute left-6 bottom-10 hidden w-20 opacity-80 md:block" />
 
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 pb-16 pt-8 md:grid-cols-2 md:pt-12">
-          <div className="relative">
-            <p className="font-hand text-xl text-primary">
-              Pediatria · Desenvolvimento · Neurodesenvolvimento
-            </p>
-            <h1 className="mt-3 font-display text-5xl leading-[0.95] text-foreground md:text-7xl">
-              Cuidando da saúde, do{" "}
-              <span className="crayon-underline text-primary">desenvolvimento</span>{" "}
-              e do futuro do seu filho.
-            </h1>
-            <p className="mt-6 max-w-lg font-body text-lg text-muted-foreground">
-              Cada criança tem seu próprio tempo. Mas identificar precocemente os sinais
-              certos pode transformar uma vida inteira.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#agendar"
-                className="rounded-full bg-primary px-7 py-3 font-hand text-xl text-primary-foreground shadow-[5px_5px_0_0_var(--teal)] transition hover:-translate-y-0.5"
-              >
-                Agendar consulta
-              </a>
-              <a
-                href="#areas"
-                className="rounded-full border-2 border-dashed border-primary bg-white px-7 py-3 font-hand text-xl text-primary transition hover:bg-accent"
-              >
-                Áreas de atendimento
-              </a>
-            </div>
+          {/* Floating nav */}
+          <div className="relative z-20 mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full bg-[rgba(15,18,32,0.78)] px-5 py-3 backdrop-blur-md ring-1 ring-white/10 mt-4 sm:mt-6">
+            <a href="#top" className="flex items-center gap-2 leading-none">
+              <span className="font-display text-2xl text-white sm:text-3xl">
+                Dr. Antônio <span className="text-[color:var(--teal)]">Veras</span>
+              </span>
+            </a>
+            <nav className="hidden items-center gap-8 font-hand text-lg text-white/85 md:flex">
+              <a href="#top" className="hover:text-white">Início</a>
+              <a href="#areas" className="hover:text-white">Áreas</a>
+              <a href="#fotos" className="hover:text-white">Pacientes</a>
+              <a href="#agendar" className="hover:text-white">Contato</a>
+            </nav>
+            <a
+              href="#agendar"
+              className="rounded-full bg-[color:var(--teal)] px-5 py-2 font-hand text-base text-[#0b1020] shadow-[3px_3px_0_0_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 sm:text-lg"
+            >
+              Agendar
+            </a>
           </div>
 
-          <div className="relative">
-            <div className="absolute -inset-6 -z-10 rounded-[3rem] bg-[color:var(--teal-soft)] rotate-[-3deg]" />
-            <div className="absolute -inset-2 -z-10 rounded-[3rem] bg-[color:var(--purple-soft)] rotate-[2deg]" />
-            <img
-              src={heroKids}
-              alt="Ilustração de crianças felizes brincando juntas"
-              width={1280}
-              height={1024}
-              className="relative rounded-[2.5rem] border-4 border-white shadow-xl"
-            />
-            <img src={doodleSun} alt="" aria-hidden className="absolute -bottom-8 -right-6 w-24 md:w-32" />
+          {/* Hero content */}
+          <div className="relative z-10 mx-auto grid max-w-6xl gap-8 px-2 pb-24 pt-20 sm:pb-32 sm:pt-28 md:grid-cols-2 md:pb-40 md:pt-32">
+            <div className="text-white">
+              <p className="font-hand text-lg text-[color:var(--teal)] sm:text-xl">
+                Dr. Antônio Veras · Pediatra
+              </p>
+              <h1 className="mt-3 font-display text-5xl leading-[1] sm:text-6xl md:text-7xl">
+                Pediatria do{" "}
+                <span className="crayon-underline text-white">Desenvolvimento</span>,
+                Neurodesenvolvimento e Saúde Infantil no Rio de Janeiro
+              </h1>
+              <p className="mt-6 max-w-xl font-body text-base text-white/85 sm:text-lg">
+                Atendimento especializado em Pediatria, Desenvolvimento Infantil, TEA, TDAH,
+                Transtornos do Neurodesenvolvimento, Neurologia Pediátrica e Saúde Mental
+                da Criança e do Adolescente.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="#agendar"
+                  className="rounded-full bg-[color:var(--teal)] px-7 py-3 font-hand text-xl text-[#0b1020] shadow-[5px_5px_0_0_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5"
+                >
+                  Agendar consulta →
+                </a>
+                <a
+                  href="#areas"
+                  className="rounded-full border-2 border-dashed border-white/70 px-7 py-3 font-hand text-xl text-white transition hover:bg-white/10"
+                >
+                  Áreas de atendimento
+                </a>
+              </div>
+            </div>
+            <div aria-hidden className="hidden md:block" />
           </div>
         </div>
       </section>
+
 
       {/* DOUBTS */}
       <section className="relative bg-[color:var(--teal-soft)] py-20">
