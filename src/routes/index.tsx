@@ -60,23 +60,23 @@ function Index() {
   return (
     <main className="paper-bg min-h-screen overflow-hidden">
       {/* HERO */}
-      <section id="top" className="relative bg-[#0b1020]">
-        <div className="relative overflow-hidden rounded-br-[5rem] sm:rounded-br-[8rem] md:rounded-br-[10rem]">
+      <section id="top" className="relative">
+        <div className="relative overflow-hidden rounded-br-[3rem] sm:rounded-br-[5rem] md:rounded-br-[7rem]">
           {/* Background photo */}
           <img
             src={drAntonio.url}
             alt="Dr. Antônio Veras"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
-          {/* Minimal dark overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/65" />
+          {/* Dark overlay for legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/60" />
 
-          {/* Floating nav */}
-          <div className="relative z-20 mx-4 mt-5 flex items-center justify-between gap-4 rounded-2xl bg-[rgba(15,18,32,0.85)] px-6 py-4 backdrop-blur-md ring-1 ring-white/10 sm:mx-8 md:mx-auto md:max-w-5xl">
-            <a href="#top" className="font-display text-2xl text-white sm:text-3xl leading-none">
+          {/* Floating glass nav */}
+          <div className="relative z-20 mx-4 mt-5 flex items-center justify-between gap-4 rounded-full border border-white/20 bg-white/10 px-6 py-3 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-xl backdrop-saturate-150 sm:mx-8 md:mx-auto md:max-w-5xl">
+            <a href="#top" className="font-display text-lg font-bold tracking-tight text-white sm:text-xl leading-none">
               Dr. Antônio <span className="text-[color:var(--teal)]">Veras</span>
             </a>
-            <nav className="hidden items-center gap-8 font-hand text-lg text-white/85 md:flex">
+            <nav className="hidden items-center gap-8 font-body text-sm font-medium text-white/85 md:flex">
               <a href="#top" className="hover:text-white">Home</a>
               <a href="#areas" className="hover:text-white">Serviços</a>
               <a href="#fotos" className="hover:text-white">Sobre mim</a>
@@ -87,25 +87,25 @@ function Index() {
           {/* Hero content */}
           <div className="relative z-10 mx-auto grid max-w-6xl gap-10 px-6 pb-24 pt-24 sm:px-8 sm:pb-32 sm:pt-28 md:grid-cols-2 md:items-end md:pb-32 md:pt-40">
             <div className="text-white">
-              <p className="font-hand text-base text-[color:var(--teal)] sm:text-lg">
+              <p className="font-body text-sm font-medium uppercase tracking-[0.2em] text-[color:var(--teal)]">
                 Dr. Antônio Veras · Pediatra
               </p>
-              <h1 className="mt-4 font-display text-4xl leading-[1.05] sm:text-5xl md:text-6xl">
+              <h1 className="mt-4 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
                 Pediatria do Desenvolvimento e Neurodesenvolvimento Infantil no Rio de Janeiro
               </h1>
-              <div className="mt-8 inline-flex items-center gap-3 rounded-full bg-black/40 px-4 py-2 ring-1 ring-white/15 backdrop-blur">
-                <span className="font-display text-base text-white">Google</span>
+              <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-md">
+                <span className="font-display text-sm font-semibold text-white">Google</span>
                 <span className="tracking-wider text-sm text-[color:var(--sun)]">★★★★★</span>
-                <span className="font-hand text-sm text-white/90">Nota 5.0 no Google</span>
+                <span className="font-body text-sm text-white/90">Nota 5.0 no Google</span>
               </div>
             </div>
             <div className="text-white md:pb-2 md:pl-6">
-              <p className="max-w-md font-body text-lg leading-relaxed text-white/90 sm:text-xl">
+              <p className="max-w-md font-body text-base leading-relaxed text-white/90 sm:text-lg">
                 Atendimento especializado em Pediatria, TEA, TDAH, Neurologia Pediátrica e Saúde Mental da criança e do adolescente.
               </p>
               <a
                 href="#agendar"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-[color:var(--teal)] px-8 py-4 font-hand text-xl text-[#0b1020] shadow-[5px_5px_0_0_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-[color:var(--teal)] px-8 py-4 font-body text-base font-semibold text-[#0b1020] shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
               >
                 Entrar em contato →
               </a>
